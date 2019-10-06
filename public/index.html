@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+    <script src="/socketEmitter.js"></script>
+
+</head>
+<body>
+<div>
+    REST servis for JWT by Aliaksandr Babrouski
+</div>
+<br/>
+<div>
+    Create User in Mongo DB: <br/>
+    "POST" query to "https://koa-jwt.herokuapp.com/user" <br/>
+    with body: <br/>
+    { <br/>
+    "displayName": "John", <br/>
+    "email": "Doe@gmail.com", <br/>
+    "password": "123456" <br/>
+    } <br/>
+</div>
+<div>
+    Get a JWT: <br/>
+    "POST" query to "https://koa-jwt.herokuapp.com/login" <br/>
+    with body: <br/>
+    { <br/>
+    "email": "Doe@gmail.com", <br/>
+    "password": "123456" <br/>
+    } <br/>
+</div>
+
+
+<div>
+    Authentication  with "JWT" key: <br/>
+    "GET" query to "https://koa-jwt.herokuapp.com/custom" <br/>
+    <br/>
+    headers: { <br/>
+    'Authorization': 'JWT xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' <br/>
+    } <br/>
+    if correct, you get "displayName"
+</div>
+
+
+</div>
+</body>
+</html>
