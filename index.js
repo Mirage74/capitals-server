@@ -170,7 +170,8 @@ router.post('/login', async (ctx, next) => {
         _id: user._id,
         displayName: user.displayName,
         bestScore: user.bestScore,
-        lastRes: user.lastRes
+        lastRes: user.lastRes,
+        debuginfo: user.debuginfo
       } 
     ctx.body = userObj
   }
