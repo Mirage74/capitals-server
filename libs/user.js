@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
   passwordHash: String,
   bestScore: Array,
   lastRes: Array,
-  debuginfo: Array
+  debuginfo: Array,
   salt: String,
 }, {
   timestamps: true
