@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
   passwordHash: String,
   bestScore: Array,
   lastRes: Array,
+  debuginfo: Array
   salt: String,
 }, {
   timestamps: true
@@ -41,6 +42,6 @@ userSchema.methods.checkPassword = function (password) {
 };
 
 
-userSchema.statics.publicFields = ['id', 'displayName', 'bestScore', 'lastRes'];
+userSchema.statics.publicFields = ['id', 'displayName', 'bestScore', 'lastRes', 'debuginfo'];
 
 module.exports = mongoose.model('cptUser', userSchema);
